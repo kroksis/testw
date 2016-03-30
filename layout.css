@@ -1,0 +1,126 @@
+/*
+.section
+splits up the page horizontally. You'll need a few of these
+to break up the content, and you can use them in your
+main wrapper, or within other divs.
+
+.col
+divides the section into columns. Each column has a left
+margin except the first one. Using .col:first-child
+{ margin-left: 0; } means you don't need to use
+class="last" anywhere. It works in all browsers since
+IE6.
+
+.group
+solves floating problems, by forcing the section to self
+clear its children (aka the clearfix hack). This is good in
+Firefox 3.5+, Safari 4+, Chrome, Opera 9+ and IE 6+.
+
+.span_1_of_3
+specifies the width of the column. Using percentages
+means it's 100% fluid.
+
+@media queries
+
+*/
+
+/*  SECTIONS  */
+.grid-container {
+    clear: both;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #333;
+}
+
+/*  COLUMN SETUP  */
+.col {
+    display: block;
+    float:left;
+    margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF FOUR  */
+.span_4_of_4 {
+    width: 100%;
+}
+.span_3_of_4 {
+    width: 74.6%;
+}
+.span_2_of_4 {
+    width: 49.2%;
+}
+.span_1_of_4 {
+    border-spacing: inherit;
+    width: 23.8%;
+}
+
+@media only screen and (min-width: 0px) {
+    .grid-container {
+        clear: both;
+        padding-left: 10px;
+        padding-right: 10px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #333;
+    }
+}
+
+
+@media only screen and (min-width: 620px) {
+    .grid-container {
+        padding-left: 23px;
+        padding-right: 23px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .grid-container {
+        padding-left: 36px;
+        padding-right: 36px;
+        max-width: 1014px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 1270px) {
+    .grid-container {
+        padding-left: 51px;
+        padding-right: 51px;
+        max-width: 1388px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+/*@media only screen and (max-width: 480px) {*/
+    /*.col {  margin: 1% 0 1% 0%; }*/
+    /*.span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 { width: 100%; }*/
+/*}*/
