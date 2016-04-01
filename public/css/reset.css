@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,17 +18,27 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
 	font: inherit;
+    font-size: 100%;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section, summary {
 	display: block;
 }
+html {
+    font-size: 100%;
+    line-height: 1.3125em;
+}
 body {
-	line-height: 1;
+    background: white;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    min-width: 230px;
+    padding-top: 63px;
+    text-rendering: optimizeSpeed;
+    color: #3a3c3f;
 }
 ol, ul {
 	list-style: none;
@@ -45,4 +54,24 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+a {
+    color: inherit;
+    font-size: inherit;
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    border: 0;
+}
+
+a img {
+    border: none;
+}
+
+img, iframe {
+    display: block;
+    max-width: 100%;
 }
